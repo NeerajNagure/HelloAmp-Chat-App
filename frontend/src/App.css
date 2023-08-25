@@ -1,0 +1,81 @@
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.app {
+  min-height: 100vh;
+}
+.home_container {
+  width: 100vw;
+  height: 100vh;
+}
+.home_img {
+  background: url("../public/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.chatContainer {
+  width: "100%";
+  background: url("../public/img/bg2.jpg");
+  color: "#FFF";
+}
+.brand {
+  font-family: Righteous, cursive;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d19317e;
+}
+::-webkit-slider-thumb:hover {
+  background: #1d1931;
+}
+.message {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  width: 100%;
+}

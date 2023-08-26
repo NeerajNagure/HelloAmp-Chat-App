@@ -118,7 +118,6 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
   useEffect(() => {
     socket.on("message received", (newMessageReceived) => {
-      console.log("madas");
       if (
         !selectedChatCompare ||
         selectedChatCompare._id !== newMessageReceived.chatId._id

@@ -19,6 +19,7 @@ import {
   DrawerHeader,
   DrawerBody,
   Input,
+  Badge
 } from "@chakra-ui/react";
 import { IoSearch, IoNotificationsSharp, IoCaretDown } from "react-icons/io5";
 import { ChatState } from "../context/ChatProvider.js";
@@ -26,7 +27,6 @@ import { useNavigate } from "react-router-dom";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { toast } from "react-toastify";
 import axios from "axios";
-import NotificationBadge, { Effect } from "react-notification-badge";
 
 const SideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -153,11 +153,12 @@ const SideDrawer = () => {
         <div style={{ display: "flex" }}>
           <Menu>
             <MenuButton p={2} fontSize="2xl" textAlign="center">
-              <NotificationBadge
-                count={notification.length}
-                effect={Effect.SCALE}
-              />
+              <div style={{display:'flex'}}>
               <IoNotificationsSharp color="rgba(255, 255, 255, 0.685)" />
+              {notification.length>0 && 
+              <Badge variant='solid' colorScheme='red' height='16px'>
+              {notification.length}</Badge>}
+              </div>
             </MenuButton>
             <MenuList p="2" cursor="pointer">
               {!notification.length && "No Notification"}
